@@ -1,10 +1,8 @@
 package com.shoppingCart.app.dao;
 
 import com.shoppingCart.app.model.Cart;
-import com.shoppingCart.app.service.CartServiceImp;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.internal.SessionImpl;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
