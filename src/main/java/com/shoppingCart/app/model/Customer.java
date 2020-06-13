@@ -27,8 +27,8 @@ public class Customer implements java.io.Serializable {
 	private String firstName;
 	private String username;
 	private String password;
-	private List<Order> orderses = new ArrayList<Order>();
-	private List<Cart> cartses = new ArrayList<Cart>();
+	private List<Order> orders = new ArrayList<Order>();
+	private List<Cart> carts = new ArrayList<Cart>();
 
 	public Customer() {
 	}
@@ -92,22 +92,22 @@ public class Customer implements java.io.Serializable {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "customer")
 	@Cascade(CascadeType.SAVE_UPDATE)
 	public List<Order> getOrderses() {
-		return this.orderses;
+		return this.orders;
 	}
 
-	public void setOrderses(List<Order> orderses) {
-		this.orderses = orderses;
+	public void setOrderses(List<Order> orders) {
+		this.orders = orders;
 	}
 
 	@JsonIgnore
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "customer")
 	@Cascade(CascadeType.SAVE_UPDATE)
-	public List<Cart> getCartses() {
-		return this.cartses;
+	public List<Cart> getCarts() {
+		return this.carts;
 	}
 
-	public void setCartses(List<Cart> cartses) {
-		this.cartses = cartses;
+	public void setCarts(List<Cart> carts) {
+		this.carts = carts;
 	}
 
 }
